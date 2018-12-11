@@ -4,14 +4,10 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
-// import { ListPage } from '../pages/list/list';
 import { AccountPage } from '../pages/account/account';
 import { BookinglistPage } from '../pages/bookinglist/bookinglist';
-import { CartPage } from '../pages/cart/cart';
+import { LoginPage } from '../pages/login/login';
 
-// import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-// import { Home2Page } from '../pages/home2/home2';
-// import { UploadPage } from '../pages/upload/upload';
 @Component({
   templateUrl: 'app.html'
 })
@@ -28,14 +24,9 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage, icon: "home" },
-
-      // { title: 'List', component: ListPage, icon: "list-box" },
       { title: 'Account', component: AccountPage, icon: "person" },
-      // { title: 'Booking List', component: BookinglistPage, icon: "list-box" },
-      { title: 'Cart', component: CartPage, icon: "cart" },
-
-      // { title: 'Hello Ionic', component: HelloIonicPage, icon: 'grid'},
-      // { title: 'Home2', component: Home2Page, icon: 'grid'}
+      { title: 'Booking List', component: BookinglistPage, icon: "list-box" },
+      { title: 'Login', component: LoginPage, icon: 'person'}
 
     ];
 
