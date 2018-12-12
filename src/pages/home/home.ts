@@ -13,6 +13,6 @@ export class HomePage {
   }
   upload(){
     // alert("dont click");
-    this.navCtrl.setRoot(UploadPage);
+    this.navCtrl.push(UploadPage);
   }
 }

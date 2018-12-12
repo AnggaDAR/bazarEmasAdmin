@@ -1,16 +1,17 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { StatusBar } from '@ionic-native/status-bar';
+import { SplashScreen } from '@ionic-native/splash-screen';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { AccountPage } from '../pages/account/account';
 import { BookinglistPage } from '../pages/bookinglist/bookinglist';
 import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 import { UploadPage } from '../pages/upload/upload';
-
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccountPage,
     BookinglistPage,
     LoginPage,
+    RegisterPage,
     UploadPage
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp),
   ],
   bootstrap: [IonicApp],
@@ -32,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AccountPage,
     BookinglistPage,
     LoginPage,
+    RegisterPage,
     UploadPage
   ],
   providers: [

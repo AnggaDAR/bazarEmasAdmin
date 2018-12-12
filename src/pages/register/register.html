@@ -1,5 +1,5 @@
 <!--
-  Generated template for the AccountPage page.
+  Generated template for the RegisterPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -7,10 +7,7 @@
 <ion-header>
 
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Account</ion-title>
+    <ion-title>Register</ion-title>
   </ion-navbar>
 
 </ion-header>
@@ -18,23 +15,32 @@
 
 <ion-content padding>
   <ion-row >
-    <ion-col></ion-col>
     <ion-col class="profile-pic">
       <img src="assets/imgs/profpic.png" />
     </ion-col>
-    <ion-col></ion-col>
+    <ion-col>
+      <button ion-button block color="primary" >Browse</button>
+    </ion-col>
   </ion-row>
 
   <ion-row>
     <ion-col>
       <ion-list inset>      
         <ion-item>
-          <ion-label fixed>Username</ion-label>
-          <ion-input disabled=true type="text" value="John Doe" ></ion-input>
+          <!-- <ion-label fixed>Username</ion-label> -->
+          <ion-input type="text" placeholder="Username" name="username" #username></ion-input>
         </ion-item>
         <ion-item>
-          <ion-label fixed>Password</ion-label>
-          <ion-input disabled=true type="password" value="user" ></ion-input>
+          <!-- <ion-label fixed>Username</ion-label> -->
+          <ion-input type="email" placeholder="Email" name="email" #email></ion-input>
+        </ion-item>
+        <ion-item>
+          <!-- <ion-label fixed>Password</ion-label> -->
+          <ion-input type="number" placeholder="Mobile No." name="mobile" #mobile></ion-input>
+        </ion-item>
+        <ion-item>
+          <!-- <ion-label fixed>Password</ion-label> -->
+          <ion-input type="password" placeholder="Password" name="password" #password></ion-input>
         </ion-item>
         
       </ion-list>        
@@ -42,8 +48,7 @@
   </ion-row>
   <ion-col>
     <!-- <button ion-button full (click)="loginUser()">Login</button> -->
-    <button ion-button full color="secondary" >Edit Profile</button>
-    <button ion-button full >Signout</button>
+    <button ion-button full color="secondary" (click)="register()">Submit</button>
   </ion-col>
-      
+
 </ion-content>
